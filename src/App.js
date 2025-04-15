@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <TopBar />
-      <Container maxWidth="xl">
+      <Container>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/lista' element={<Lista />} />
