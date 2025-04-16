@@ -27,7 +27,7 @@ export default function TopBar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="static" sx={{ zIndex: 200}}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Tooltip title="Coches Mariano">

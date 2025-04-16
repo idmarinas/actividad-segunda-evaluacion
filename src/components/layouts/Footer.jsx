@@ -2,7 +2,7 @@ import { Box, Container } from "@mui/material";
 
 export default function Footer () {
     return (
-        <footer>
+        <footer style={{ zIndex: 200}}>
             <Box sx={{ py: 3, textAlign: 'center', bgcolor: 'primary.main', color: 'white' }}>
                 <Container maxWidth="xl">
                     <Box component="span" sx={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
