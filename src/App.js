@@ -5,7 +5,7 @@ import Lista from './pages/Lista';
 import Estadisticas from './pages/Estadisticas';
 import TopBar from './components/layouts/TopBar';
 import Footer from './components/layouts/Footer';
-import { Container, Paper, Typography } from '@mui/material';
+import { colors, Container, Paper, Typography } from '@mui/material';
 import { useTitle } from './contexts/AppContext';
 
 export default function App() {
@@ -14,20 +14,18 @@ export default function App() {
   return (
     <>
       <TopBar />
-
-      <Paper elevation={3} sx={{ padding: 2, bgcolor: 'primary.light', color: 'white' }}>
-          <Typography variant="h4" component="h1" sx={{ textAlign: 'center' }}>{title}</Typography>
-      </Paper>
       
-      <Container>
-          <Paper elevation={3} sx={{ padding: 2, marginY: 2, bgcolor: 'primary.light', color: 'white' }}>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/lista' element={<Lista />} />
-              <Route path='/estadisticas' element={<Estadisticas />} />
-            </Routes>
-          </Paper>
-      </Container>
+      <Paper square component={Container} elevation={16} sx={{ padding: 2, bgcolor: 'primary.light', color: 'white', flexGrow: 1, zIndex: 100 }}>
+        <Paper elevation={0} sx={{ padding: 2, bgcolor: colors.blue[100] }}>
+            <Typography variant="h4" component="h1" sx={{ textAlign: 'center' }}>{title}</Typography>
+        </Paper>
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/lista' element={<Lista />} />
+          <Route path='/estadisticas' element={<Estadisticas />} />
+        </Routes>
+      </Paper>
 
       <Footer />
     </>
