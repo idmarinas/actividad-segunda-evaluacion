@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import AppProviders from './AppProviders';
+import { TitleProvider } from './contexts/AppContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <AppProviders>
+    <TitleProvider>
+      <BrowserRouter>
         <App />
-      </AppProviders>
-    </BrowserRouter>
+      </BrowserRouter>
+    </TitleProvider>
   </React.StrictMode>
 );
 
