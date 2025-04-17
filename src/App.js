@@ -16,7 +16,7 @@ export default function App() {
       <TopBar />
       
       <Paper square component={Container} elevation={16} sx={{ padding: 2, bgcolor: 'primary.light', color: 'white', flexGrow: 1, zIndex: 100 }}>
-        <Paper elevation={0} sx={{ padding: 2, bgcolor: colors.blue[100] }}>
+        <Paper elevation={0} sx={{ padding: 2, marginBottom: 2, bgcolor: colors.blue[100] }}>
             <Typography variant="h4" component="h1" sx={{ textAlign: 'center' }}>{title}</Typography>
         </Paper>
 
