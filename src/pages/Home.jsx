@@ -1,17 +1,12 @@
-import { useEffect } from "react"
-import { useTitle } from "../contexts/AppContext"
 import { Card, CardMedia, CardContent, Typography, Box } from "@mui/material"
 import Car from "../components/icons/Car"
+import Title from "../components/layouts/Title"
 
 export default function Home () {
-    const { setTitle } = useTitle()
-
-    useEffect(() => {
-        setTitle('Portada')
-    })
-
     return (
         <>
+            <Title title="Portada" />
+
             <Card sx={{ display: 'flex', alignItems: 'center'  }}>
                 <Box sx={{ display: 'flex', flex: '1 1 auto' }}>
                     <CardContent>
