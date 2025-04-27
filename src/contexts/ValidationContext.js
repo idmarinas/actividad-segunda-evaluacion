@@ -18,7 +18,7 @@ const checkNotEmptyOnlyLetters = (value, setError, setHelpText, setInvalid, setC
 
     if (!checkNotEmpty(value, setError, setHelpText, setInvalid)) {
         return false;
-    } else if (!/^[a-zA-Z\s]+$/.test(value)) {
+    } else if (!/^[a-zA-Z]+$/.test(value)) {
         setHelpText("Solo puede contener letras y espacios");
 
         return false;
