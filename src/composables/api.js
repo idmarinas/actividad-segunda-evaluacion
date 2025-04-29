@@ -6,7 +6,7 @@ export async function getAllVehiculos() {
         headers: {
             "Content-Type": "application/json",
         },
-    });
+    }).then(response => response.json()).then(data => data);
 };
 
 export async function saveVehiculoAction(data, snackbarCreate) {
