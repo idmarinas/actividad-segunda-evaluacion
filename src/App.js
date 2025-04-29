@@ -5,10 +5,12 @@ import Lista from './pages/Lista';
 import Estadisticas from './pages/Estadisticas';
 import TopBar from './components/layouts/TopBar';
 import Footer from './components/layouts/Footer';
-import { Container, Paper } from '@mui/material';
-import { VehiculosProvider } from './contexts/AppContext';
+import { Alert, Container, Paper, Snackbar } from '@mui/material';
+import { useSnackbar, VehiculosProvider } from './contexts/AppContext';
 
 export default function App() {
+  const { snackbarOpen, handleClose, snackbarSeverity, snackbarDuration, snackbarMessage } = useSnackbar();
+
   return (
     <>
       <VehiculosProvider>
@@ -22,6 +24,17 @@ export default function App() {
             </Routes>
         </Paper>
       </VehiculosProvider>
+
+      <Snackbar
+        open={snackbarOpen} 
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }} 
+        autoHideDuration={snackbarDuration} 
+        onClose={handleClose}
+      >
+        <Alert variant='filled' severity={snackbarSeverity}>
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
 
       <Footer />
     </>
