@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useForm } from "../../contexts/FormContext";
 
 export default function ChasisInput(props) {
-    const { pending, ...restProps } = props;
+    const { pending, ...attrs } = props;
     const [error, setError] = useState(false);
     const [helpText, setHelpText] = useState("");
     const [color, setColor] = useState('');
@@ -26,7 +26,7 @@ export default function ChasisInput(props) {
                 helperText={helpText}
                 onChange={handleChange}
                 onBlur={handleChange}
-                {...restProps}
+                {...attrs}
             />
         </>
     );
