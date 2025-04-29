@@ -2,7 +2,8 @@ import { TextField } from "@mui/material";
 import { useState } from "react";
 import { useForm } from "../../contexts/FormContext";
 
-export default function ModeloInput({ pending }) {
+export default function ModeloInput(props) {
+    const { pending, ...attrs } = props;
     const [error, setError] = useState(false);
     const [helpText, setHelpText] = useState("");
     const [color, setColor] = useState('');
@@ -24,6 +25,7 @@ export default function ModeloInput({ pending }) {
                 helperText={helpText}
                 onChange={handleChange}
                 onBlur={handleChange}
+                {...attrs}
             />
         </>
     );
