@@ -13,12 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import Logo from '../icons/Logo';
 import { Link } from 'react-router-dom';
 import { AddCircle } from '@mui/icons-material';
-import { NewVehiculoDialogForm } from '../dialogs/NewVehiculoDialog';
+import NewVehiculoDialogForm from '../dialogs/NewVehiculoDialog';
 
 const pages = ['Lista', 'Estadisticas'];
 
 export default function TopBar() {
-    const [anchorElNav, setAnchorElNav] = useState(null);
+    const [ anchorElNav, setAnchorElNav ] = useState(null);
     const [ dialogOpen, setDialogOpen ] = useState(false);
 
     const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
