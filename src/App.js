@@ -11,17 +11,17 @@ import { VehiculosProvider } from './contexts/AppContext';
 export default function App() {
   return (
     <>
-      <TopBar />
-      
-      <Paper square component={Container} elevation={16} sx={{ padding: 2, bgcolor: 'primary.light', color: 'white', flexGrow: 1, zIndex: 100 }}>
-        <VehiculosProvider>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/lista' element={<Lista />} />
-            <Route path='/estadisticas' element={<Estadisticas />} />
-          </Routes>
-        </VehiculosProvider>
-      </Paper>
+      <VehiculosProvider>
+        <TopBar />
+        
+        <Paper square component={Container} elevation={16} sx={{ padding: 2, bgcolor: 'primary.light', color: 'white', flexGrow: 1, zIndex: 100 }}>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/lista' element={<Lista />} />
+              <Route path='/estadisticas' element={<Estadisticas />} />
+            </Routes>
+        </Paper>
+      </VehiculosProvider>
 
       <Footer />
     </>
