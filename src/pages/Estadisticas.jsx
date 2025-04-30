@@ -29,7 +29,7 @@ export default function Estadisticas () {
 
     const stats =  {
         total: filterList.length,
-        potenciaAvg: filterList.reduce((acc, vehiculo) => acc + Number(vehiculo.potencia), 0) / filterList.length,
+        potenciaAvg: (filterList.reduce((acc, vehiculo) => acc + Number(vehiculo.potencia), 0) / filterList.length) || 0,
         min: filterList.reduce((min, vehiculo) => {
             const potencia = Number(vehiculo.potencia);
             min = 0 === min ? potencia : min
